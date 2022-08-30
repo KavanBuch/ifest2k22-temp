@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i.Fest '21</title>
+    <link rel="icon" href="{% static 'images/i.Fest_logo_new.png' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Geo&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+<!--<link rel="stylesheet" href="{% static 'css/NAVBAR.css' %}"/>-->
+    <script src="https://kit.fontawesome.com/d234b7fa74.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="{% static 'css/background.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/NavbarFinal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+     {% load fpc_tags %}
+    {% fpc %}
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '532727481054924');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=532727481054924&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+<div id="bg-stars">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+
+
+    <div class="navbar-property navbar-container br">
+                <div class="navbar-property navbar-sidebar" id="mySidebar">
+            <i onclick="sidebar_close()" class="navbar-property fas fa-times closing-btn"></i>
+                   <!--<br> <br>-->
+                <img
+                    id="logo-navbar"
+                    class="navbar-property logo-navbar"
+                    src="{% static 'images/iFest_logo_final.png' %}"
+                    alt="i.Fest 2021"
+                />
+                    <!--<br>-->
+                <div class="navbar-property nav-links-container">
+                    {% if user.is_authenticated %}
+                    <a class="navbar-property" href="{% url 'profile' %}">Profile</a>
+                    <a class="navbar-property" href="{% url 'dashboard' %}">Dashboard</a>
+                     {% endif %}
+                    <a class="navbar-property" href="{% url 'home' %}">Home</a>
+                    <a class="navbar-property" href="{% url 'events' %}">Events</a>
+                    <a class="navbar-property" href="{% url 'pronites' %}">Pronites</a>
+                    <a class="navbar-property" href="{% url 'speakers' %}">Speakers</a>
+                    <a class="navbar-property" href="{% url 'ifestTeam' %}">Team</a>
+                    <a class="navbar-property" href="{% url 'sponsors' %}">Sponsors</a>
+                </div>
+
+
+                <div class="navbar-property" id="navbar-buttons">
+                    {% if user.is_authenticated %}
+                    <button class="navbar-property btn-navbar"><a class="navbar-property" href="{% url 'logout_page' %}">
+                        Logout</a></button>
+                    {% else %}
+                    <button class="navbar-property btn-navbar"><a class="navbar-property" href="{% url 'signup' %}">Register</a></button>
+                    </a>
+                    <button class="navbar-property btn-navbar"> <a class="navbar-property" href="{% url 'login_page' %}">
+                        Login</a>
+                    </button>
+                    {% endif %}
+                </div>
+            </div>
+
+            </div>
+            <div id="open_icon" class="navbar-property">
+                <button class="open_icon_button navbar-property" onclick="sidebar_open()">☰</button>
+            </div>
+
+
+    <!--<div class="sidebar" id="mySidebar">
+        <button onclick="sidebar_close()">&times;</button>
+            <a href="#"><li class="listitem"><img id="logo-navbar" src="{% static 'images/iFest_logo_cropped.png' %}" alt="i.Fest 2021"></li></a>
+            {% if user.is_authenticated  %}
+            <a href="{% url 'profile' %}"><li class="listitem">Profile</li></a>
+            <a href="{% url 'dashboard' %}"><li class="listitem">Dashboard</li></a>
+            {% endif %}
+            <a href="{% url 'home' %}"><li class="listitem">Home</li></a>
+            <a href="{% url 'events' %}"><li class="listitem">Events</li></a>
+
+            <div id="buttons">
+                {% if user.is_authenticated  %}
+                <a href="{% url 'logout_page' %}"><li class="listitem"><button class="btn-navbar">Logout</button></li></a>
+                {% else %}
+                <a href="{% url 'signup' %}"><li class="listitem"><button class="btn-navbar">Register</button></li></a>
+                <a href="{% url 'login_page' %}"><li class="listitem"><button class="btn-navbar">Login</button></li></a>
+                {% endif %}
+            </div>
+
+        </div>
+
+<div>
+  <button onclick="sidebar_open()">☰</button>
+</div>-->
+
+<!--<div class="outertext">
+        <nav role="navigation">
+            <div class="hamburger">
+
+                <div id="menuToggle" class="blur">
+
+
+
+                <input id = "checkboxit" type="checkbox" />
+
+
+
+
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+
+
+
+
+        <ul id="menu">
+            <a href="#"><li class="listitem"><img id="logo" src="{% static 'images/iFest_logo_cropped.png' %}" alt="i.Fest 2021"></li></a>
+            {% if user.is_authenticated  %}
+            <a href="{% url 'profile' %}"><li class="listitem">Profile</li></a>
+            <a href="{% url 'dashboard' %}"><li class="listitem">Dashboard</li></a>
+            {% endif %}
+            <a href="{% url 'home' %}"><li class="listitem">Home</li></a>
+            <a href="{% url 'events' %}"><li class="listitem">Events</li></a>
+
+            <div id="buttons">
+                {% if user.is_authenticated  %}
+                <a href="{% url 'logout_page' %}"><li class="listitem"><button class="btn-navbar">Logout</button></li></a>
+                {% else %}
+                <a href="{% url 'signup' %}"><li class="listitem"><button class="btn-navbar">Register</button></li></a>
+                <a href="{% url 'login_page' %}"><li class="listitem"><button class="btn-navbar">Login</button></li></a>
+                {% endif %}
+            </div>
+        </ul>
+
+
+    </div>
+</div>
+</nav>
+</div>-->
+
+
+{% block content %}
+
+{% endblock %}
+
+    <div class="footer-container">
+                <!--
+                    Copyright
+                    privacy policy
+                    contact (phone nos)
+                    all main navigation routes
+                    social icons
+                    past website routes
+                    branding
+                    about
+                 -->
+                <div class="footer-header-container">
+                    <div class="footer-branding">
+                        <img src="{% static 'images/iFest_logo_final.png' %}" alt="i.Fest21" />
+                        <a class="laptop-daiict-logo" target="_blank" href="https://www.daiict.ac.in"><img style="height:70px; width:auto;" src="{% static 'images/daiict_logo.png' %}" alt="daiict" /></a>
+                    </div>
+                    <div class="phone-daiict-logo">
+                        <a target="_blank" href="https://www.daiict.ac.in"><img style="height:50px; width:auto;" src="{% static 'images/daiict_logo.png' %}" alt="daiict" /></a>
+                    </div>
+                    <div class="footer-socials">
+                        <a target="_blank" href="https://youtube.com/channel/UC6W55GI1uB5us0sMMvryb3A"><i class="fab fa-youtube" style="color: red;"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/ifestdaiict"><i class="fab fa-facebook-square"></i></a>
+                        <a target="_blank" href="https://instagram.com/i.fest"><i class="fab fa-instagram-square"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/ieee-student-branch-daiict"><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=ifest2021.daiict@gmail.com"><i class="fas fa-at"></i></a>
+                    </div>
+                </div>
+                <div class="footer-urls-container">
+                    <div class="footer-urls-sub-container">
+                        <h2>Quick Links</h2>
+                        <a href="{% url 'home' %}">Home</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'dashboard' %}">Dashboard</a>
+                        <a href="{% url 'profile' %}">Profile</a>
+                    </div>
+                    <div class="footer-urls-sub-container">
+                        <h2>Past Websites</h2>
+                        <a target="_blank" href="http://ifest.daiict.ac.in">i.Fest'20</a>
+                        <a target="_blank" href="http://ifest.daiict.ac.in/ifest19">i.Fest'19</a>
+                    </div>
+                    <div class="footer-urls-sub-container">
+                        <h2>Contacts</h2>
+                        <div class="contact-container">
+                            <div class="contact-name">Rinkal Naik</div>
+                            <div class="contact-number">+91 7069670451</div>
+                        </div>
+                        <br>
+                        <div class="contact-container">
+                            <div class="contact-name">Prabhav Shah</div>
+                            <div class="contact-number">+91 9106505620</div>
+                        </div>
+                        <br>
+                        <!--<div class="contact-container">
+                            <div class="contact-name">Siddharth Rathod</div>
+                            <div class="contact-number">+91 7046098218</div>
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="footer-footer-container">
+                    <a href="#" class="about">About</a>
+                    <a href="#" class="copyright"
+                        ><i class="far fa-copyright"></i>Copyright</a
+                    >
+                    <a href="#" class="privacypolicy">privacy policy</a>
+                </div>
+            </div>
+</div>
+
+{% block parallex %}
+{% endblock %}
+
+<!--<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="{% static 'js/NAVBAR.js' %}"></script>-->
+<script src="{% static 'js/newnavbar.js' %}"></script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '532727481054924');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=532727481054924&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>
