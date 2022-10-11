@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-* {
+/* * {
     margin: 0;
     padding: 0;
     font-family: 'Courier Prime', monospace;
@@ -9,7 +9,7 @@
 
 .footer-container{
     display: none;
-}
+} */
 
 /* #title {
   position: absolute;
@@ -27,7 +27,7 @@
 } */
 
 /* MyStyles */
-
+/* 
 .login-container {
     display: grid;
     justify-content: center;
@@ -41,7 +41,7 @@
     align-content: center;
     /* flex-wrap: wrap; */
     /* padding: 40px 0; */
-}
+/* }
 
 .main-container .box {
     position: relative;
@@ -61,8 +61,8 @@
     height: 100%;
     background: white;
     border-radius: 8px;
-}
-
+} */ */
+/* 
 .main-container .box::after {
     content: '';
     position: absolute;
@@ -110,8 +110,8 @@
     50% {
         transform: translateY(-15px);
     }
-}
-
+} */
+/* 
 @keyframes animate2 {
     0%,
     100% {
@@ -134,9 +134,9 @@
     transition: 0.5s;
     animation: animate 2s ease-in-out infinite;
     box-shadow: 0 5px 15px, rgba(0, 0, 0, 0.05);
-}
+} */
 
-.main-container .box .span2::before {
+/* .main-container .box .span2::before {
     content: '';
     position: absolute;
     top: 30px;
@@ -150,7 +150,7 @@
     transition: 0.5s;
     animation: animate2 2s ease-in-out infinite;
     box-shadow: 0 5px 15px, rgba(0, 0, 0, 0.05);
-}
+} */
 
 /* .main-container .box:hover .span1::before {
     top: -20px;
@@ -167,7 +167,7 @@
     height: 80px;
     opacity: 1;
 } */
-.main-container .box .span1::after {
+/* .main-container .box .span1::after {
     content: '';
     position: absolute;
     bottom: -20px;
@@ -177,8 +177,8 @@
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(0px);
-    transition: 0.5s;
-    animation: animate 2s ease-in-out infinite;
+    transition: 0.5s; */
+    /* animation: animate 2s ease-in-out infinite;
     box-shadow: 0 5px 15px, rgba(0, 0, 0, 0.05);
     animation-delay: -1s;
 }
@@ -196,7 +196,7 @@
     animation: animate2 2s ease-in-out infinite;
     box-shadow: 0 5px 15px, rgba(0, 0, 0, 0.05);
     animation-delay: -1s;
-}
+} */
 
 /*.main-container .box:hover .span1::after {
     bottom: -20px;
@@ -213,7 +213,7 @@
     height: 80px;
     opacity: 1;
 }*/
-
+/* 
 .main-container .box .content {
     position: relative;
     left: 0;
@@ -223,13 +223,13 @@
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     /* backdrop-filter: blur(10px); */
-    transition: 0.5s;
+    /* transition: 0.5s;
     border-radius: 8px;
     color: white;
     font-size: 1.2rem;
     z-index: 1;
-}
-
+} */
+/* 
 .main-container .box .content h1 {
     font-size: 2rem;
     color: white;
@@ -256,8 +256,8 @@ h6 {
     color: white;
     z-index: -1;
     animation: animate2 6s ease-in-out infinite;
-}
-
+} */ 
+/* 
 .input-field {
     margin: 8px 0px;
 }
@@ -307,7 +307,7 @@ h6 {
 .signup-btn:hover a{
     color: white;
 } */
-
+/* 
 .login-btn {
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -327,9 +327,9 @@ h6 {
     border-radius: 0.2em;
     border: 1px solid white;
     letter-spacing: 0.2em;
-}
+} */ 
 
-.signup-btn {
+/* .signup-btn {
     font-size: 0.8em;
     font-weight: 600;
 }
@@ -343,7 +343,7 @@ h6 {
 }
 
 /* MEDIA QUERIES */
-
+/* 
 @media only screen and (max-width: 480px) {
     .main-container .box {
         width: 350px;
@@ -372,11 +372,149 @@ h6 {
     }
     .signup-btn {
         font-size: 0.65em;
-    }
-}
-
+    } */
+/* } */
+/* 
 @media (max-height:480px) and (orientation: landscape) {
     #bg-stars {
         overflow-y: auto;
     }
+} */
+
+body{
+    background-color: #080710;
+}
+.background{
+    width: 600px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -60px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -50px;
+    bottom: -80px;
+}
+
+/* ---------------------------FORM CSS ------------------------------*/
+form{
+    /* height: 520px; */
+    width: 40%;
+    background-color: #1d1f21;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    /* backdrop-filter: blur(10px); */
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    z-index: +1;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    background-color: #1d1f21;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.show {
+    position: absolute;
+    right: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    color: rgb(251, 249, 249);
+    display: none;
+    cursor: pointer;
+}
+.pass:valid~.show {
+    display: block;
+}
+
+/* Forgot Password link CSS */
+.forgot-pass{
+    position: relative;
+    text-align: center;
+    background-color: #1d1f21;
+    margin-top: 1em;
+}
+
+.forgot-pwd-btn {
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+/* Not Registered Link CSS */
+.not-registered{
+    margin-top: 20px;
+    background-color: #1d1f21;
+    text-align: center;
 }
